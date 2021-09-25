@@ -132,8 +132,9 @@ p {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   margin-bottom: 7vh;
-  border-bottom: .5px rgba(255, 255, 255, 0.274) solid;
+  border-bottom: 0.5px rgba(255, 255, 255, 0.274) solid;
 }
 
 .sent {
