@@ -88,11 +88,12 @@ const Chat = () => {
 };
 
 const ChatMessage = (props) => {
-  const { text, photoURL } = props.message;
+  const { text, photoURL, createdAt } = props.message;
   return (
     <div className="chat">
       <img src={photoURL} alt="profilePhoto" />
-      <p>{text}</p>
+      <p className="msg">{text}</p>
+      <p>{createdAt.toDate().toString().split("2021")[1].split("GMT")[0]}</p>
     </div>
   );
 };

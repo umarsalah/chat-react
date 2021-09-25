@@ -136,6 +136,9 @@ p {
   margin-bottom: 7vh;
   border-bottom: 0.5px rgba(255, 255, 255, 0.274) solid;
 }
+.msg {
+  width: 75%;
+}
 
 .sent {
   flex-direction: row-reverse;
