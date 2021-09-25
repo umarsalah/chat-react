@@ -138,6 +138,8 @@ p {
 }
 .msg {
   width: 75%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .sent {
