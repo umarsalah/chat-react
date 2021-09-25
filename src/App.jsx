@@ -93,7 +93,10 @@ const ChatMessage = (props) => {
     <div className="chat">
       <img src={photoURL} alt="profilePhoto" />
       <p className="msg">{text}</p>
-      <p>{createdAt.toDate().toString().split("2021")[1].split("GMT")[0]}</p>
+      <p>
+        {createdAt &&
+          createdAt.toDate().toString().split("2021")[1].split("GMT")[0]}
+      </p>
     </div>
   );
 };
