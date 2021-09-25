@@ -90,7 +90,7 @@ const Chat = () => {
 const ChatMessage = (props) => {
   const { text, photoURL } = props.message;
   return (
-    <div>
+    <div className="chat">
       <img src={photoURL} alt="profilePhoto" />
       <p>{text}</p>
     </div>
