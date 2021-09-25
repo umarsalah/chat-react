@@ -51,7 +51,7 @@ const SignOut = () => {
 
 const Chat = () => {
   const messageRef = firestore.collection("messages");
-  const query = messageRef.orderBy("createdAt").limit(25);
+  const query = messageRef.orderBy("createdAt");
 
   const [messages] = useCollectionData(query, { idField: "id" });
 
@@ -60,13 +60,13 @@ const Chat = () => {
   const sendMessage = async (e) => {
     e.preventDefault();
     const { uid, photoURL } = auth.currentUser;
-
-    await messageRef.add({
-      text: formValue,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      uid,
-      photoURL,
-    });
+    formValue.length > 0 &&
+      (await messageRef.add({
+        text: formValue,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+        uid,
+        photoURL,
+      }));
     setFormValue("");
   };
 
